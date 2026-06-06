@@ -1,0 +1,15 @@
+{
+  "kind": "code_demo",
+  "id": "gen_art_experiment_1",
+  "type": "code",
+  "iteration": 1,
+  "title": "Lock-In Extraction Phi-Coefficient Hallucination Detection",
+  "summary": "Implemented the complete Lock-In Extraction pipeline for hallucination detection using Hadamard-multiplexed phi-coefficient computation. The method builds K document variants via span negation guided by a Hadamard design matrix, extracts atomic facts from each variant using a frozen-schema LLM canonicalization pass, computes phi-coefficients (Pearson correlation between atom presence vectors and channel design vectors), and uses the max-phi score as a hallucination signal.\n\nFive baselines implemented: (1) embedding cosine similarity via all-MiniLM-L6-v2, (2) LLM self-judge (yes/no grounding query), (3) verbatim LCS ratio, (4) self-consistency (5-run re-extraction frequency), (5) LOO single-span negation. Prerequisite gates T1 (cross-variant canonicalization agreement) and T2 (null-document prior subtraction) are computed and reported.\n\nEvaluated on three datasets: multinli (80 NLI premise/hypothesis pairs, entailment=faithful, contradiction=hallucinated), factscore (344 wiki_bio_gpt3_hallucination atoms from 40 topics with per-sentence annotations), summac (60 SNLI proxy examples). Total: 484 atom-level labels.\n\nResults (AUROC): Lock-in achieves 0.528/0.549/0.700 on NLI/FactScore/SummaC. LLM-judge baseline achieves 0.763/0.631/0.933. Embedding baseline achieves 0.552/0.643/0.944. SNR/K ablation over K={4,8,16} and negation-vs-deletion ablation also computed. Calibration (Platt + isotonic) with ECE reported. Multi-hop ProofWriter evaluation included.\n\nTotal API cost: $0.49 (budget: $9 hard cap). All outputs validated against exp_gen_sol_out JSON schema.",
+  "original_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_vvl1C8Qi95dE/3_invention_loop/iter_1/gen_art/gen_art_experiment_1",
+  "demo_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_vvl1C8Qi95dE/4_gen_paper_repo/_3_gen_art_demo/iter_1/gen_art_experiment_1",
+  "out_expected_files": {
+    "notebook": "",
+    "mini_data_file": ""
+  },
+  "notebook_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_vvl1C8Qi95dE/4_gen_paper_repo/_3_gen_art_demo/iter_1/gen_art_experiment_1/method_code_demo.ipynb"
+}

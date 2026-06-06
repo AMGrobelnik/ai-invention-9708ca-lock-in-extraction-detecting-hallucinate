@@ -1,0 +1,15 @@
+{
+  "kind": "code_demo",
+  "id": "gen_art_dataset_1",
+  "type": "code",
+  "iteration": 1,
+  "title": "Lock-In Hallucination Detection Benchmark Dataset",
+  "summary": "Two-dataset benchmark for lock-in hallucination coefficient experiments. PRIMARY: FActScore-ChatGPT (157 biographies, 183 total \u2014 26 filtered for <5 atoms) with per-atom binary labels (S=1/NS=0, IR skipped), enabling direct lock-in coefficient calculation via Hadamard variant documents. SECONDARY: SummaCoz train+val (6069 article/summary pairs, label 0=inconsistent, label 2=consistent) with NL explanations of inconsistencies. FRANK discarded (0/2246 faithful \u2014 error-taxonomy only, not a balanced benchmark). XSumFaith discarded (no source article text, 87% imbalanced). Total: 6226 examples across 2 datasets.",
+  "original_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_vvl1C8Qi95dE/3_invention_loop/iter_1/gen_art/gen_art_dataset_1",
+  "demo_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_vvl1C8Qi95dE/4_gen_paper_repo/_3_gen_art_demo/iter_1/gen_art_dataset_1",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_vvl1C8Qi95dE/4_gen_paper_repo/_3_gen_art_demo/iter_1/gen_art_dataset_1/data_code_demo.ipynb"
+}
