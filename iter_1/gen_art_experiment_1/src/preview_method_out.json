@@ -1,0 +1,371 @@
+{
+  "metadata": {
+    "method_name": "lock_in_extraction_phi_coefficient",
+    "description": "Hadamard-multiplexed phi-coefficient hallucination detection",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "k_variants": 8,
+    "t1_agreement": 0.2116,
+    "t2_prior_fraction": 0.0,
+    "auroc_multinli": {
+      "n": 80,
+      "lockin": {
+        "auroc": 0.5281,
+        "ci_95": [
+          0.4245,
+          0.6326
+        ],
+        "n": 80
+      },
+      "embedding": {
+        "auroc": 0.5519,
+        "ci_95": [
+          0.4223,
+          0.6781
+        ],
+        "n": 80
+      },
+      "verbatim": {
+        "auroc": 0.4531,
+        "ci_95": [
+          0.3293,
+          0.5577
+        ],
+        "n": 80
+      },
+      "llm_judge": {
+        "auroc": 0.7625,
+        "ci_95": [
+          0.6685,
+          0.8588
+        ],
+        "n": 80
+      },
+      "self_consistency": {
+        "auroc": 0.5,
+        "ci_95": [
+          0.5,
+          0.5
+        ],
+        "n": 80
+      },
+      "loo": {
+        "auroc": 0.5125,
+        "ci_95": [
+          0.5,
+          0.5429
+        ],
+        "n": 80
+      }
+    },
+    "auroc_factscore": {
+      "n": 344,
+      "lockin": {
+        "auroc": 0.5488,
+        "ci_95": [
+          0.4933,
+          0.6078
+        ],
+        "n": 344
+      },
+      "embedding": {
+        "auroc": 0.6431,
+        "ci_95": [
+          0.5736,
+          0.7087
+        ],
+        "n": 344
+      },
+      "verbatim": {
+        "auroc": 0.6404,
+        "ci_95": [
+          0.5693,
+          0.7036
+        ],
+        "n": 344
+      },
+      "llm_judge": {
+        "auroc": 0.631,
+        "ci_95": [
+          0.5801,
+          0.6851
+        ],
+        "n": 344
+      },
+      "self_consistency": {
+        "auroc": 0.5,
+        "ci_95": [
+          0.5,
+          0.5
+        ],
+        "n": 344
+      },
+      "loo": {
+        "auroc": 0.4938,
+        "ci_95": [
+          0.4794,
+          0.5
+        ],
+        "n": 344
+      }
+    },
+    "auroc_summac": {
+      "n": 60,
+      "lockin": {
+        "auroc": 0.7,
+        "ci_95": [
+          0.6047,
+          0.7901
+        ],
+        "n": 60
+      },
+      "embedding": {
+        "auroc": 0.9444,
+        "ci_95": [
+          0.8814,
+          0.9836
+        ],
+        "n": 60
+      },
+      "verbatim": {
+        "auroc": 0.6833,
+        "ci_95": [
+          0.5516,
+          0.8043
+        ],
+        "n": 60
+      },
+      "llm_judge": {
+        "auroc": 0.9333,
+        "ci_95": [
+          0.8689,
+          0.9855
+        ],
+        "n": 60
+      },
+      "self_consistency": {
+        "auroc": 0.5,
+        "ci_95": [
+          0.5,
+          0.5
+        ],
+        "n": 60
+      },
+      "loo": {
+        "auroc": 0.5,
+        "ci_95": [
+          0.5,
+          0.5
+        ],
+        "n": 60
+      }
+    },
+    "snr_curves": {
+      "4": {
+        "lockin_auroc": NaN,
+        "loo_auroc": NaN,
+        "n": 8
+      },
+      "8": {
+        "lockin_auroc": NaN,
+        "loo_auroc": NaN,
+        "n": 8
+      },
+      "16": {
+        "lockin_auroc": NaN,
+        "loo_auroc": NaN,
+        "n": 8
+      }
+    },
+    "multihop_accuracy_by_depth": {
+      "depth_0": {
+        "0.1": {
+          "raw": 1.0,
+          "lockin": 1.0,
+          "embed": 1.0,
+          "n": 10
+        },
+        "0.2": {
+          "raw": 1.0,
+          "lockin": 1.0,
+          "embed": 1.0,
+          "n": 10
+        }
+      }
+    },
+    "calibration": {
+      "ece_before": 0.0424,
+      "ece_after_platt": 0.0391,
+      "ece_after_isotonic": 0.0292
+    },
+    "ablations": {
+      "negation_vs_deletion": {
+        "negation_auroc": null,
+        "deletion_auroc": null,
+        "n": 15
+      }
+    },
+    "cost_total": 0.4935,
+    "total_atoms_scored": 484
+  },
+  "datasets": [
+    {
+      "dataset": "multinli",
+      "examples": [
+        {
+          "input": "Atom: Sometimes it is amusing to see what the hologram creates.\nSource: the hologram makes up all these things and uh i mean sometimes  sometimes it's funny sometimes it's not but uh you know it's som...",
+          "output": "faithful",
+          "predict_lockin": "1.0",
+          "predict_embedding": "0.1513",
+          "predict_verbatim": "0.5733",
+          "predict_llm_judge": "0.0",
+          "predict_self_consistency": "1.0",
+          "predict_loo": "0.0",
+          "metadata_dataset": "multinli",
+          "metadata_phi_max": "0.0",
+          "metadata_provenance_span": "the hologram makes up all these things and uh i mean sometimes  sometimes it's funny",
+          "metadata_k_variants": "8",
+          "metadata_n_channels": "4",
+          "metadata_atom": "Sometimes it is amusing to see what the hologram creates."
+        },
+        {
+          "input": "Atom: Many youth are lazy.\nSource: Mortifyingly enough, it is all  the difficulty, the laziness, the pathetic formlessness in youth, the round peg in the square hole, the whatever do you want?",
+          "output": "faithful",
+          "predict_lockin": "0.622",
+          "predict_embedding": "0.5401",
+          "predict_verbatim": "0.8079",
+          "predict_llm_judge": "1.0",
+          "predict_self_consistency": "1.0",
+          "predict_loo": "0.0",
+          "metadata_dataset": "multinli",
+          "metadata_phi_max": "0.378",
+          "metadata_provenance_span": "Mortifyingly enough, it is all  the difficulty, the laziness, the pathetic formlessness in youth, the round peg in the square hole, the whatever do you want?",
+          "metadata_k_variants": "8",
+          "metadata_n_channels": "1",
+          "metadata_atom": "Many youth are lazy."
+        },
+        {
+          "input": "Atom: There is a British publication called the Sun.\nSource: Britain's best-selling tabloid, the Sun , announced as a front-page world exclusive Friday that Texan model Jerry Hall has started divorce ...",
+          "output": "faithful",
+          "predict_lockin": "0.7418",
+          "predict_embedding": "0.654",
+          "predict_verbatim": "0.9464",
+          "predict_llm_judge": "0.0",
+          "predict_self_consistency": "1.0",
+          "predict_loo": "0.0",
+          "metadata_dataset": "multinli",
+          "metadata_phi_max": "0.2582",
+          "metadata_provenance_span": "Britain's best-selling tabloid, the Sun , announced as a front-page world exclusive Friday that Texan model Jerry Hall has started divorce proceedings against aging rock star Mick Jagger at the High C",
+          "metadata_k_variants": "8",
+          "metadata_n_channels": "1",
+          "metadata_atom": "There is a British publication called the Sun."
+        }
+      ]
+    },
+    {
+      "dataset": "factscore",
+      "examples": [
+        {
+          "input": "Atom: John Russell Reynolds (1820\u20131876) was an English lawyer, judge, and author.\nSource: Sir John Russell Reynolds, 1st Baronet (22 May 1828 \u2013 29 May 1896) was a British neurologist and physician. Re...",
+          "output": "hallucinated",
+          "predict_lockin": "1.0",
+          "predict_embedding": "0.2641",
+          "predict_verbatim": "0.4396",
+          "predict_llm_judge": "1.0",
+          "predict_self_consistency": "1.0",
+          "predict_loo": "0.0",
+          "metadata_dataset": "factscore",
+          "metadata_phi_max": "0.0",
+          "metadata_provenance_span": "Sir John Russell Reynolds, 1st Baronet (22 May 1828 \u2013 29 May 1896) was a British neurologist and physician.",
+          "metadata_k_variants": "16",
+          "metadata_n_channels": "15",
+          "metadata_atom": "John Russell Reynolds (1820\u20131876) was an English lawyer, judge, and author."
+        },
+        {
+          "input": "Atom: He was born in London, the son of a barrister, and was educated at Eton College and Trinity College, Cambridge.\nSource: Sir John Russell Reynolds, 1st Baronet (22 May 1828 \u2013 29 May 1896) was a B...",
+          "output": "hallucinated",
+          "predict_lockin": "0.7418",
+          "predict_embedding": "0.4795",
+          "predict_verbatim": "0.6016",
+          "predict_llm_judge": "1.0",
+          "predict_self_consistency": "1.0",
+          "predict_loo": "0.0",
+          "metadata_dataset": "factscore",
+          "metadata_phi_max": "0.2582",
+          "metadata_provenance_span": "Sir John Russell Reynolds, 1st Baronet (22 May 1828 \u2013 29 May 1896) was a British neurologist and physician.",
+          "metadata_k_variants": "16",
+          "metadata_n_channels": "15",
+          "metadata_atom": "He was born in London, the son of a barrister, and was educated at Eton College and Trinity College, Cambridge."
+        },
+        {
+          "input": "Atom: He was called to the bar in 1845, and became a Queen's Counsel in 1859.\nSource: Sir John Russell Reynolds, 1st Baronet (22 May 1828 \u2013 29 May 1896) was a British neurologist and physician. Reynol...",
+          "output": "hallucinated",
+          "predict_lockin": "1.0",
+          "predict_embedding": "0.6038",
+          "predict_verbatim": "0.5285",
+          "predict_llm_judge": "1.0",
+          "predict_self_consistency": "1.0",
+          "predict_loo": "0.0",
+          "metadata_dataset": "factscore",
+          "metadata_phi_max": "0.0",
+          "metadata_provenance_span": "Sir John Russell Reynolds, 1st Baronet (22 May 1828 \u2013 29 May 1896) was a British neurologist and physician.",
+          "metadata_k_variants": "16",
+          "metadata_n_channels": "15",
+          "metadata_atom": "He was called to the bar in 1845, and became a Queen's Counsel in 1859."
+        }
+      ]
+    },
+    {
+      "dataset": "summac",
+      "examples": [
+        {
+          "input": "Atom: A tan girl runs leans over an object\nSource: One tan girl with a wool hat is running and leaning over an object, while another person in a wool hat is sitting on the ground.",
+          "output": "faithful",
+          "predict_lockin": "0.622",
+          "predict_embedding": "0.3551",
+          "predict_verbatim": "0.5976",
+          "predict_llm_judge": "0.0",
+          "predict_self_consistency": "1.0",
+          "predict_loo": "0.0",
+          "metadata_dataset": "summac",
+          "metadata_phi_max": "0.378",
+          "metadata_provenance_span": "One tan girl with a wool hat is running and leaning over an object, while another person in a wool hat is sitting on the ground.",
+          "metadata_k_variants": "8",
+          "metadata_n_channels": "1",
+          "metadata_atom": "A tan girl runs leans over an object"
+        },
+        {
+          "input": "Atom: A person is near a pile of coconuts.\nSource: A person wearing a straw hat, standing outside working a steel apparatus with a pile of coconuts on the ground.",
+          "output": "faithful",
+          "predict_lockin": "0.2254",
+          "predict_embedding": "0.3208",
+          "predict_verbatim": "0.5646",
+          "predict_llm_judge": "0.0",
+          "predict_self_consistency": "1.0",
+          "predict_loo": "0.0",
+          "metadata_dataset": "summac",
+          "metadata_phi_max": "0.7746",
+          "metadata_provenance_span": "A person wearing a straw hat, standing outside working a steel apparatus with a pile of coconuts on the ground.",
+          "metadata_k_variants": "8",
+          "metadata_n_channels": "1",
+          "metadata_atom": "A person is near a pile of coconuts."
+        },
+        {
+          "input": "Atom: A boy is on a playground.\nSource: A little boy in a gray and white striped sweater and tan pants is playing on a piece of playground equipment.",
+          "output": "faithful",
+          "predict_lockin": "1.0",
+          "predict_embedding": "0.2622",
+          "predict_verbatim": "0.6269",
+          "predict_llm_judge": "0.0",
+          "predict_self_consistency": "1.0",
+          "predict_loo": "0.0",
+          "metadata_dataset": "summac",
+          "metadata_phi_max": "0.0",
+          "metadata_provenance_span": "A little boy in a gray and white striped sweater and tan pants is playing on a piece of playground equipment.",
+          "metadata_k_variants": "8",
+          "metadata_n_channels": "1",
+          "metadata_atom": "A boy is on a playground."
+        }
+      ]
+    }
+  ]
+}
