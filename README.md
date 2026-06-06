@@ -12,39 +12,44 @@ This repository contains artifacts from an AI-generated research project.
 
 | Title | Demo | Source Code |
 |-------|------|-------------|
-| [Lock-In Hallucination Detection Benchmark Dataset](https://github.com/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/tree/main/iter_1/gen_art_dataset_1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/blob/main/iter_1/gen_art_dataset_1/demo/gen_art_dataset_1) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/tree/main/iter_1/gen_art_dataset_1/src) |
+| [Lock-In Hallucination Detection Benchmark Dataset](https://github.com/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/tree/main/round-1-test-idea/dataset-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/blob/main/round-1-test-idea/dataset-1/demo/gen_art_dataset_1) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/tree/main/round-1-test-idea/dataset-1/src) |
 
 ### Experiments
 
 | Title | Demo | Source Code |
 |-------|------|-------------|
-| [Lock-In Extraction Phi-Coefficient Hallucination Detection](https://github.com/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/tree/main/iter_1/gen_art_experiment_1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/blob/main/iter_1/gen_art_experiment_1/demo/gen_art_experiment_1) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/tree/main/iter_1/gen_art_experiment_1/src) |
+| [Lock-In Extraction Phi-Coefficient Hallucination Detection](https://github.com/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/tree/main/round-1-test-idea/experiment-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/blob/main/round-1-test-idea/experiment-1/demo/gen_art_experiment_1) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/tree/main/round-1-test-idea/experiment-1/src) |
 
 ### Evaluations
 
 | Title | Demo | Source Code |
 |-------|------|-------------|
-| [Lock-In Extraction: AUROC, Calibration & Provenance](https://github.com/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/tree/main/iter_1/gen_art_evaluation_1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/blob/main/iter_1/gen_art_evaluation_1/demo/gen_art_evaluation_1) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/tree/main/iter_1/gen_art_evaluation_1/src) |
+| [Lock-In Extraction: AUROC, Calibration & Provenance](https://github.com/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/tree/main/round-1-test-idea/evaluation-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/blob/main/round-1-test-idea/evaluation-1/demo/gen_art_evaluation_1) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/AMGrobelnik/ai-invention-9708ca-lock-in-extraction-detecting-hallucinate/tree/main/round-1-test-idea/evaluation-1/src) |
 
 ## Repository Structure
 
-Each artifact has its own folder with source code and demos:
+Artifacts are grouped by the round of invention that produced them. Each
+artifact has its own folder with source code and a self-contained demo:
 
 ```
 .
-├── <artifact_id>/
-│   ├── src/                     # Full workspace from execution
-│   │   ├── method.py            # Main implementation
-│   │   ├── method_out.json      # Full output data
-│   │   ├── mini_method_out.json # Mini version (3 examples)
-│   │   └── ...                  # All execution artifacts
-│   └── demo/                    # Self-contained demos
-│       └── method_code_demo.ipynb # Colab-ready notebook (code + data inlined)
-├── <another_artifact>/
-│   ├── src/
-│   └── demo/
-├── paper.pdf                    # Research paper
-├── paper_latex/                 # LaTeX source files
+├── round-1-test-idea/               # One folder per round of invention
+│   ├── experiment-1/
+│   │   ├── README.md                # What this artifact is
+│   │   ├── src/                     # Full workspace from execution
+│   │   │   ├── method.py            # Main implementation
+│   │   │   ├── method_out.json      # Full output data
+│   │   │   └── ...                  # All execution artifacts
+│   │   └── demo/                    # Self-contained demo
+│   │       └── method_code_demo.ipynb # Colab-ready notebook (code + data inlined)
+│   ├── dataset-1/
+│   │   ├── src/
+│   │   └── demo/
+│   └── evaluation-1/
+│       ├── src/
+│       └── demo/
+├── paper.pdf                        # Research paper
+├── paper_latex/                     # LaTeX source files
 └── README.md
 ```
 
