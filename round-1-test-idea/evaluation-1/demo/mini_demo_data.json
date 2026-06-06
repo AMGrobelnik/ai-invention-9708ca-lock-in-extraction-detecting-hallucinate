@@ -1,0 +1,661 @@
+{
+  "method": "lock_in_extraction",
+  "simulation": true,
+  "simulation_note": "Mini demo dataset (20 atoms) for notebook demo",
+  "n_atoms": 20,
+  "n_supported": 15,
+  "n_unsupported": 5,
+  "K_values": [
+    1,
+    4,
+    16
+  ],
+  "atoms": [
+    {
+      "atom_id": 0,
+      "text": "Atom 0: simulated factual claim about entity 3",
+      "gold_label": 0,
+      "bio_id": 3,
+      "phi_lockin": 0.0,
+      "phi_lockin_K": {
+        "K1": 1.0,
+        "K4": 0.2747408775056591,
+        "K16": 0.21154149633868138
+      },
+      "phi_hadamard": 0.0,
+      "phi_random": 0.29429018601344104,
+      "phi_negation": 0.0,
+      "phi_deletion": 0.0481491809131339,
+      "phi_null_doc": 0.2561444292242202,
+      "phi_lockin_no_null": 0.1925138130644718,
+      "phi_loo": 0.0,
+      "phi_loo_K": {
+        "K1": 0.4327539512736661,
+        "K4": 0.0,
+        "K16": 0.0
+      },
+      "score_embedding_sim": 0.0,
+      "score_llm_judge": 0.09657065838990025,
+      "score_verbatim_quote": 0.31836401337801234,
+      "score_self_consistency": 0.544875457940103,
+      "provenance_top_span_rank": -1
+    },
+    {
+      "atom_id": 1,
+      "text": "Atom 1: simulated factual claim about entity 2",
+      "gold_label": 1,
+      "bio_id": 2,
+      "phi_lockin": 0.7201264013378068,
+      "phi_lockin_K": {
+        "K1": 1.0,
+        "K4": 0.817755311375267,
+        "K16": 0.514122091500506
+      },
+      "phi_hadamard": 0.7201264013378068,
+      "phi_random": 0.5153329222272968,
+      "phi_negation": 0.43377317924587583,
+      "phi_deletion": 0.38467099287957474,
+      "phi_null_doc": 0.0,
+      "phi_lockin_no_null": 0.7201264013378068,
+      "phi_loo": 0.42147407082871446,
+      "phi_loo_K": {
+        "K1": 0.8927432726013939,
+        "K4": 0.5365977459978407,
+        "K16": 0.5182863882465963
+      },
+      "score_embedding_sim": 0.9560032353712864,
+      "score_llm_judge": 0.9655976353594118,
+      "score_verbatim_quote": 0.8205414667967115,
+      "score_self_consistency": 0.8763516527198286,
+      "provenance_top_span_rank": 1
+    },
+    {
+      "atom_id": 2,
+      "text": "Atom 2: simulated factual claim about entity 0",
+      "gold_label": 1,
+      "bio_id": 0,
+      "phi_lockin": 0.5211061305675143,
+      "phi_lockin_K": {
+        "K1": 0.39331993601015086,
+        "K4": 0.7231102929725254,
+        "K16": 0.6050697344024181
+      },
+      "phi_hadamard": 0.5211061305675143,
+      "phi_random": 0.4850019873161984,
+      "phi_negation": 0.4674042538607678,
+      "phi_deletion": 0.4575073470067933,
+      "phi_null_doc": 0.07035527506332717,
+      "phi_lockin_no_null": 0.584445280880297,
+      "phi_loo": 0.4357121763871187,
+      "phi_loo_K": {
+        "K1": 0.37768209935761476,
+        "K4": 0.4774865620922721,
+        "K16": 0.5215458641349248
+      },
+      "score_embedding_sim": 0.7778769828834751,
+      "score_llm_judge": 0.7406858092930584,
+      "score_verbatim_quote": 0.5698634060411505,
+      "score_self_consistency": 0.7748834577705628,
+      "provenance_top_span_rank": 1
+    },
+    {
+      "atom_id": 3,
+      "text": "Atom 3: simulated factual claim about entity 0",
+      "gold_label": 1,
+      "bio_id": 0,
+      "phi_lockin": 0.7053126176123748,
+      "phi_lockin_K": {
+        "K1": 0.42348531258136723,
+        "K4": 0.7917733578342704,
+        "K16": 0.5947832604594195
+      },
+      "phi_hadamard": 0.7053126176123748,
+      "phi_random": 0.5504743947791969,
+      "phi_negation": 0.4848220542703837,
+      "phi_deletion": 0.6701622155920313,
+      "phi_null_doc": 0.15474547538462607,
+      "phi_lockin_no_null": 0.8374360908311735,
+      "phi_loo": 0.1520150843496556,
+      "phi_loo_K": {
+        "K1": 1.0,
+        "K4": 0.35752670448491863,
+        "K16": 0.5344836771797916
+      },
+      "score_embedding_sim": 0.6055414185457848,
+      "score_llm_judge": 0.813309163171841,
+      "score_verbatim_quote": 0.5703202678096088,
+      "score_self_consistency": 0.8868239553676537,
+      "provenance_top_span_rank": 1
+    },
+    {
+      "atom_id": 4,
+      "text": "Atom 4: simulated factual claim about entity 2",
+      "gold_label": 1,
+      "bio_id": 2,
+      "phi_lockin": 0.5061676098756502,
+      "phi_lockin_K": {
+        "K1": 0.19614248947183988,
+        "K4": 0.5039741873761311,
+        "K16": 0.7361893821457285
+      },
+      "phi_hadamard": 0.5061676098756502,
+      "phi_random": 0.8690894360221912,
+      "phi_negation": 0.5303854441357926,
+      "phi_deletion": 0.754100250863101,
+      "phi_null_doc": 0.06959949681440629,
+      "phi_lockin_no_null": 0.5711554308590308,
+      "phi_loo": 0.5290934750964676,
+      "phi_loo_K": {
+        "K1": 0.0,
+        "K4": 0.282630424954097,
+        "K16": 0.4104159954383594
+      },
+      "score_embedding_sim": 0.5531382792024873,
+      "score_llm_judge": 0.6605152353399446,
+      "score_verbatim_quote": 0.5811029717845178,
+      "score_self_consistency": 0.7912580473407123,
+      "provenance_top_span_rank": 3
+    },
+    {
+      "atom_id": 5,
+      "text": "Atom 5: simulated factual claim about entity 1",
+      "gold_label": 1,
+      "bio_id": 1,
+      "phi_lockin": 0.7817675451960909,
+      "phi_lockin_K": {
+        "K1": 0.3724111149423653,
+        "K4": 0.8404554090622605,
+        "K16": 0.6756318839937434
+      },
+      "phi_hadamard": 0.7817675451960909,
+      "phi_random": 0.4441503991752162,
+      "phi_negation": 0.7259683917412811,
+      "phi_deletion": 0.9394769426706858,
+      "phi_null_doc": 0.05288170043340704,
+      "phi_lockin_no_null": 0.8232558532382812,
+      "phi_loo": 0.35814126174668304,
+      "phi_loo_K": {
+        "K1": 0.5634066194268706,
+        "K4": 0.2256097127969352,
+        "K16": 0.6378642066518947
+      },
+      "score_embedding_sim": 0.8986714429633298,
+      "score_llm_judge": 0.9979167869189707,
+      "score_verbatim_quote": 0.2409964205781855,
+      "score_self_consistency": 0.845411647008264,
+      "provenance_top_span_rank": 1
+    },
+    {
+      "atom_id": 6,
+      "text": "Atom 6: simulated factual claim about entity 0",
+      "gold_label": 1,
+      "bio_id": 0,
+      "phi_lockin": 0.6425111133520621,
+      "phi_lockin_K": {
+        "K1": 0.8315385393321657,
+        "K4": 0.9955497085370721,
+        "K16": 0.4617368436917315
+      },
+      "phi_hadamard": 0.6425111133520621,
+      "phi_random": 0.7742901038264665,
+      "phi_negation": 0.5432329322495915,
+      "phi_deletion": 1.0,
+      "phi_null_doc": 0.07714956837615257,
+      "phi_lockin_no_null": 0.6988616008424875,
+      "phi_loo": 0.45940650880044603,
+      "phi_loo_K": {
+        "K1": 1.0,
+        "K4": 0.3211796492313328,
+        "K16": 0.6304677171509584
+      },
+      "score_embedding_sim": 0.7594123837720708,
+      "score_llm_judge": 0.5643392753770269,
+      "score_verbatim_quote": 0.45574139592789414,
+      "score_self_consistency": 0.6231588126834211,
+      "provenance_top_span_rank": 1
+    },
+    {
+      "atom_id": 7,
+      "text": "Atom 7: simulated factual claim about entity 2",
+      "gold_label": 0,
+      "bio_id": 2,
+      "phi_lockin": 0.3135159176647573,
+      "phi_lockin_K": {
+        "K1": 0.3231339674935859,
+        "K4": 0.0,
+        "K16": 0.08924027848954355
+      },
+      "phi_hadamard": 0.3135159176647573,
+      "phi_random": 0.2841938093893529,
+      "phi_negation": 0.0,
+      "phi_deletion": 0.0,
+      "phi_null_doc": 0.14375745487989336,
+      "phi_lockin_no_null": 0.4253037441919555,
+      "phi_loo": 0.0804565640063337,
+      "phi_loo_K": {
+        "K1": 1.0,
+        "K4": 0.0,
+        "K16": 0.0
+      },
+      "score_embedding_sim": 0.745470042832837,
+      "score_llm_judge": 0.0,
+      "score_verbatim_quote": 0.1715760888686066,
+      "score_self_consistency": 0.40026786485550403,
+      "provenance_top_span_rank": -1
+    },
+    {
+      "atom_id": 8,
+      "text": "Atom 8: simulated factual claim about entity 3",
+      "gold_label": 1,
+      "bio_id": 3,
+      "phi_lockin": 0.5478605683394088,
+      "phi_lockin_K": {
+        "K1": 0.7894394783193746,
+        "K4": 0.46169131466431884,
+        "K16": 0.5887427504527829
+      },
+      "phi_hadamard": 0.5478605683394088,
+      "phi_random": 0.5397206946025606,
+      "phi_negation": 0.8518919616900492,
+      "phi_deletion": 0.4616739007949017,
+      "phi_null_doc": 0.07316295008183138,
+      "phi_lockin_no_null": 0.608165106468352,
+      "phi_loo": 0.5420901146920142,
+      "phi_loo_K": {
+        "K1": 1.0,
+        "K4": 0.6498252938657777,
+        "K16": 0.653937282569336
+      },
+      "score_embedding_sim": 0.45831210195387106,
+      "score_llm_judge": 0.7618697884989681,
+      "score_verbatim_quote": 0.6150181593060485,
+      "score_self_consistency": 0.7854196973982523,
+      "provenance_top_span_rank": 2
+    },
+    {
+      "atom_id": 9,
+      "text": "Atom 9: simulated factual claim about entity 1",
+      "gold_label": 1,
+      "bio_id": 1,
+      "phi_lockin": 0.8333812008011046,
+      "phi_lockin_K": {
+        "K1": 0.8035504383036155,
+        "K4": 0.9333626487244425,
+        "K16": 0.785175540404521
+      },
+      "phi_hadamard": 0.8333812008011046,
+      "phi_random": 0.629295551718901,
+      "phi_negation": 0.6201230440514004,
+      "phi_deletion": 0.2788725950829905,
+      "phi_null_doc": 0.03534436614997577,
+      "phi_lockin_no_null": 0.8622807810644371,
+      "phi_loo": 0.22603160564224012,
+      "phi_loo_K": {
+        "K1": 0.6091830493372743,
+        "K4": 0.5737419006343079,
+        "K16": 0.835778819371008
+      },
+      "score_embedding_sim": 0.859115772233727,
+      "score_llm_judge": 1.0,
+      "score_verbatim_quote": 0.7999472740730884,
+      "score_self_consistency": 0.8976951255751353,
+      "provenance_top_span_rank": 2
+    },
+    {
+      "atom_id": 10,
+      "text": "Atom 10: simulated factual claim about entity 4",
+      "gold_label": 0,
+      "bio_id": 4,
+      "phi_lockin": 0.20107549107467834,
+      "phi_lockin_K": {
+        "K1": 0.0,
+        "K4": 0.10057437873236577,
+        "K16": 0.06455685310193537
+      },
+      "phi_hadamard": 0.20107549107467834,
+      "phi_random": 0.07456552650041774,
+      "phi_negation": 0.4154293908004917,
+      "phi_deletion": 0.0,
+      "phi_null_doc": 0.1743938793276858,
+      "phi_lockin_no_null": 0.32167953027548224,
+      "phi_loo": 0.001168195295246005,
+      "phi_loo_K": {
+        "K1": 0.0,
+        "K4": 0.0,
+        "K16": 0.08480767538080419
+      },
+      "score_embedding_sim": 0.33429495537542125,
+      "score_llm_judge": 0.45347257134317326,
+      "score_verbatim_quote": 0.0,
+      "score_self_consistency": 0.05428196723569639,
+      "provenance_top_span_rank": -1
+    },
+    {
+      "atom_id": 11,
+      "text": "Atom 11: simulated factual claim about entity 3",
+      "gold_label": 1,
+      "bio_id": 3,
+      "phi_lockin": 0.5857508266755339,
+      "phi_lockin_K": {
+        "K1": 0.5045681529361775,
+        "K4": 0.9477954877715005,
+        "K16": 0.5824767524467124
+      },
+      "phi_hadamard": 0.5857508266755339,
+      "phi_random": 0.7280207843627139,
+      "phi_negation": 0.5392935247986173,
+      "phi_deletion": 0.48992942475034784,
+      "phi_null_doc": 0.0857253863076968,
+      "phi_lockin_no_null": 0.6551068628703862,
+      "phi_loo": 0.9645569512853767,
+      "phi_loo_K": {
+        "K1": 0.5294846458224954,
+        "K4": 0.8018801116244294,
+        "K16": 0.5146802671829366
+      },
+      "score_embedding_sim": 0.5534353973378283,
+      "score_llm_judge": 1.0,
+      "score_verbatim_quote": 0.4624972909041267,
+      "score_self_consistency": 0.8438101060317803,
+      "provenance_top_span_rank": 1
+    },
+    {
+      "atom_id": 12,
+      "text": "Atom 12: simulated factual claim about entity 2",
+      "gold_label": 1,
+      "bio_id": 2,
+      "phi_lockin": 0.5971799674267656,
+      "phi_lockin_K": {
+        "K1": 0.023422293716013787,
+        "K4": 0.5561239991611462,
+        "K16": 0.7073956747271426
+      },
+      "phi_hadamard": 0.5971799674267656,
+      "phi_random": 0.7428025023359865,
+      "phi_negation": 0.6412387418985318,
+      "phi_deletion": 0.5535428383712504,
+      "phi_null_doc": 0.15214535951975952,
+      "phi_lockin_no_null": 0.7223686431767311,
+      "phi_loo": 0.31538970955793416,
+      "phi_loo_K": {
+        "K1": 0.46842276928282756,
+        "K4": 0.7586806115781214,
+        "K16": 0.5409218271870094
+      },
+      "score_embedding_sim": 0.6492712788825077,
+      "score_llm_judge": 0.946154938227729,
+      "score_verbatim_quote": 0.944436664297692,
+      "score_self_consistency": 0.7021490174552317,
+      "provenance_top_span_rank": 1
+    },
+    {
+      "atom_id": 13,
+      "text": "Atom 13: simulated factual claim about entity 4",
+      "gold_label": 0,
+      "bio_id": 4,
+      "phi_lockin": 0.3417143311486017,
+      "phi_lockin_K": {
+        "K1": 0.0,
+        "K4": 0.20608870962082565,
+        "K16": 0.09324091143810975
+      },
+      "phi_hadamard": 0.3417143311486017,
+      "phi_random": 0.052649414949319046,
+      "phi_negation": 0.437293607156108,
+      "phi_deletion": 0.37426179296107615,
+      "phi_null_doc": 0.025676972970712877,
+      "phi_lockin_no_null": 0.368720020806795,
+      "phi_loo": 0.17885733191711653,
+      "phi_loo_K": {
+        "K1": 1.0,
+        "K4": 0.0,
+        "K16": 0.0
+      },
+      "score_embedding_sim": 0.3331087655288247,
+      "score_llm_judge": 0.20222414370222358,
+      "score_verbatim_quote": 0.2379273212033987,
+      "score_self_consistency": 0.5567887042632924,
+      "provenance_top_span_rank": -1
+    },
+    {
+      "atom_id": 14,
+      "text": "Atom 14: simulated factual claim about entity 2",
+      "gold_label": 1,
+      "bio_id": 2,
+      "phi_lockin": 0.7048166096546118,
+      "phi_lockin_K": {
+        "K1": 0.5093614793761387,
+        "K4": 0.6778923538078963,
+        "K16": 0.6975281148327003
+      },
+      "phi_hadamard": 0.7048166096546118,
+      "phi_random": 0.5167766773203779,
+      "phi_negation": 0.6225353693739213,
+      "phi_deletion": 0.5974734581733784,
+      "phi_null_doc": 0.0,
+      "phi_lockin_no_null": 0.7048166096546118,
+      "phi_loo": 0.9090135703810498,
+      "phi_loo_K": {
+        "K1": 0.7912444467432314,
+        "K4": 0.384561055293334,
+        "K16": 0.3274837706303789
+      },
+      "score_embedding_sim": 0.7278700197534366,
+      "score_llm_judge": 0.7866093654203599,
+      "score_verbatim_quote": 0.25332499481290394,
+      "score_self_consistency": 0.8993134275643331,
+      "provenance_top_span_rank": 5
+    },
+    {
+      "atom_id": 15,
+      "text": "Atom 15: simulated factual claim about entity 0",
+      "gold_label": 1,
+      "bio_id": 0,
+      "phi_lockin": 0.7119098917393982,
+      "phi_lockin_K": {
+        "K1": 1.0,
+        "K4": 0.7047786056207902,
+        "K16": 0.4712154059791024
+      },
+      "phi_hadamard": 0.7119098917393982,
+      "phi_random": 0.7544356586262877,
+      "phi_negation": 0.7876431392440354,
+      "phi_deletion": 0.790556836926023,
+      "phi_null_doc": 0.0,
+      "phi_lockin_no_null": 0.7119098917393982,
+      "phi_loo": 1.0,
+      "phi_loo_K": {
+        "K1": 0.10238293211160071,
+        "K4": 0.7073628986881004,
+        "K16": 0.5820859383594621
+      },
+      "score_embedding_sim": 0.6761743221294667,
+      "score_llm_judge": 0.5655985614810368,
+      "score_verbatim_quote": 0.560691857549358,
+      "score_self_consistency": 0.39124913321025195,
+      "provenance_top_span_rank": 2
+    },
+    {
+      "atom_id": 16,
+      "text": "Atom 16: simulated factual claim about entity 0",
+      "gold_label": 0,
+      "bio_id": 0,
+      "phi_lockin": 0.16486739528755612,
+      "phi_lockin_K": {
+        "K1": 0.0,
+        "K4": 0.3327444845152444,
+        "K16": 0.0
+      },
+      "phi_hadamard": 0.16486739528755612,
+      "phi_random": 0.28163279400748603,
+      "phi_negation": 0.0,
+      "phi_deletion": 0.15062461898885018,
+      "phi_null_doc": 0.07658765592991879,
+      "phi_lockin_no_null": 0.22393651823005997,
+      "phi_loo": 0.14002109827285356,
+      "phi_loo_K": {
+        "K1": 0.439921569379194,
+        "K4": 0.659489406170755,
+        "K16": 0.0
+      },
+      "score_embedding_sim": 0.7464623210819888,
+      "score_llm_judge": 0.7189872620133773,
+      "score_verbatim_quote": 0.0,
+      "score_self_consistency": 0.46642204301718215,
+      "provenance_top_span_rank": -1
+    },
+    {
+      "atom_id": 17,
+      "text": "Atom 17: simulated factual claim about entity 4",
+      "gold_label": 1,
+      "bio_id": 4,
+      "phi_lockin": 0.9712471401305691,
+      "phi_lockin_K": {
+        "K1": 0.5943630578750955,
+        "K4": 0.5732568926498395,
+        "K16": 0.5402950644237781
+      },
+      "phi_hadamard": 0.9712471401305691,
+      "phi_random": 0.37037646179917405,
+      "phi_negation": 0.7308193100964201,
+      "phi_deletion": 0.5946184260738099,
+      "phi_null_doc": 0.16341994324699782,
+      "phi_lockin_no_null": 1.0780675338396197,
+      "phi_loo": 0.49003269821027423,
+      "phi_loo_K": {
+        "K1": 1.0,
+        "K4": 0.17088737004168109,
+        "K16": 0.8082558234503947
+      },
+      "score_embedding_sim": 0.6822033932689672,
+      "score_llm_judge": 1.0,
+      "score_verbatim_quote": 0.5034278166681978,
+      "score_self_consistency": 0.4832066284602923,
+      "provenance_top_span_rank": 2
+    },
+    {
+      "atom_id": 18,
+      "text": "Atom 18: simulated factual claim about entity 4",
+      "gold_label": 1,
+      "bio_id": 4,
+      "phi_lockin": 0.5890377475423076,
+      "phi_lockin_K": {
+        "K1": 0.7979730798767216,
+        "K4": 0.45035785521408966,
+        "K16": 0.6749548000932896
+      },
+      "phi_hadamard": 0.5890377475423076,
+      "phi_random": 0.3960083014793735,
+      "phi_negation": 0.7032829843265189,
+      "phi_deletion": 0.4542953995478701,
+      "phi_null_doc": 0.04922884720304396,
+      "phi_lockin_no_null": 0.6255128427715253,
+      "phi_loo": 0.6248955546786968,
+      "phi_loo_K": {
+        "K1": 0.756974401117223,
+        "K4": 0.5417336660025194,
+        "K16": 0.5365998429774559
+      },
+      "score_embedding_sim": 0.7428843768153702,
+      "score_llm_judge": 0.9275067621795392,
+      "score_verbatim_quote": 0.8986881771310968,
+      "score_self_consistency": 0.3299490984273052,
+      "provenance_top_span_rank": 3
+    },
+    {
+      "atom_id": 19,
+      "text": "Atom 19: simulated factual claim about entity 3",
+      "gold_label": 1,
+      "bio_id": 3,
+      "phi_lockin": 0.5731635906392695,
+      "phi_lockin_K": {
+        "K1": 1.0,
+        "K4": 0.5548451620116732,
+        "K16": 0.49899015891807863
+      },
+      "phi_hadamard": 0.5731635906392695,
+      "phi_random": 0.4344985885197099,
+      "phi_negation": 0.5868190062024488,
+      "phi_deletion": 0.3520507288473029,
+      "phi_null_doc": 0.037008760731840736,
+      "phi_lockin_no_null": 0.6039386142311067,
+      "phi_loo": 0.8884525524370626,
+      "phi_loo_K": {
+        "K1": 0.4061696003414989,
+        "K4": 0.6304091738599772,
+        "K16": 0.7840811816151324
+      },
+      "score_embedding_sim": 0.9407237959489735,
+      "score_llm_judge": 0.6602139142842508,
+      "score_verbatim_quote": 0.757038194769958,
+      "score_self_consistency": 0.6279124007720682,
+      "provenance_top_span_rank": 2
+    }
+  ],
+  "multihop": [
+    {
+      "depth": 0,
+      "raw_llm_correct": 1.0,
+      "align_correct": 1.0,
+      "lockin_correct": 1.0
+    },
+    {
+      "depth": 0,
+      "raw_llm_correct": 1.0,
+      "align_correct": 1.0,
+      "lockin_correct": 1.0
+    },
+    {
+      "depth": 0,
+      "raw_llm_correct": 1.0,
+      "align_correct": 1.0,
+      "lockin_correct": 1.0
+    },
+    {
+      "depth": 0,
+      "raw_llm_correct": 1.0,
+      "align_correct": 1.0,
+      "lockin_correct": 1.0
+    },
+    {
+      "depth": 0,
+      "raw_llm_correct": 1.0,
+      "align_correct": 1.0,
+      "lockin_correct": 1.0
+    },
+    {
+      "depth": 1,
+      "raw_llm_correct": 1.0,
+      "align_correct": 1.0,
+      "lockin_correct": 1.0
+    },
+    {
+      "depth": 1,
+      "raw_llm_correct": 0.0,
+      "align_correct": 1.0,
+      "lockin_correct": 1.0
+    },
+    {
+      "depth": 1,
+      "raw_llm_correct": 1.0,
+      "align_correct": 1.0,
+      "lockin_correct": 1.0
+    },
+    {
+      "depth": 1,
+      "raw_llm_correct": 1.0,
+      "align_correct": 1.0,
+      "lockin_correct": 1.0
+    },
+    {
+      "depth": 1,
+      "raw_llm_correct": 1.0,
+      "align_correct": 1.0,
+      "lockin_correct": 0.0
+    }
+  ],
+  "prereqs": {
+    "canonicalization_agreement": 0.91,
+    "null_doc_prior_fraction": 0.12
+  }
+}
