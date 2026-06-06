@@ -1,0 +1,71 @@
+{
+  "datasets": [
+    {
+      "dataset": "FActScore-ChatGPT",
+      "examples": [
+        {
+          "input": "Lanny Flaherty is an American actor born on December 18, 1949, in Pensacola, Florida. He has appeared in numerous films, television shows, and theater productions throughout his career, which began in...",
+          "output": "[{\"atom_text\": \"Lanny Flaherty is an American.\", \"label\": 1}, {\"atom_text\": \"Lanny Flaherty is an actor.\", \"label\": 1}, {\"atom_text\": \"Lanny Flaherty was born on December 18, 1949.\", \"label\": 0}, {\"at...",
+          "metadata_topic": "Lanny Flaherty",
+          "metadata_model": "ChatGPT",
+          "metadata_n_atoms": 26,
+          "metadata_n_supported": 7,
+          "metadata_n_not_supported": 19,
+          "metadata_task_type": "hallucination_detection"
+        },
+        {
+          "input": "Marianne McAndrew is an American actress and singer, born on November 21, 1942, in Cleveland, Ohio. She began her acting career in the late 1960s, appearing in various television shows and films. Her ...",
+          "output": "[{\"atom_text\": \"Marianne McAndrew is an American.\", \"label\": 0}, {\"atom_text\": \"Marianne McAndrew is an actress.\", \"label\": 1}, {\"atom_text\": \"Marianne McAndrew is a singer.\", \"label\": 0}, {\"atom_text...",
+          "metadata_topic": "Marianne McAndrew",
+          "metadata_model": "ChatGPT",
+          "metadata_n_atoms": 20,
+          "metadata_n_supported": 9,
+          "metadata_n_not_supported": 11,
+          "metadata_task_type": "hallucination_detection"
+        },
+        {
+          "input": "Doug Sheehan is an American actor who was born on April 27, 1949, in Santa Monica, California. He is best known for his roles in soap operas, including his portrayal of Joe Kelly on \"General Hospital\"...",
+          "output": "[{\"atom_text\": \"Doug Sheehan is an American.\", \"label\": 1}, {\"atom_text\": \"Doug Sheehan is an actor.\", \"label\": 1}, {\"atom_text\": \"Doug Sheehan was born on April 27, 1949.\", \"label\": 1}, {\"atom_text\":...",
+          "metadata_topic": "Doug Sheehan",
+          "metadata_model": "ChatGPT",
+          "metadata_n_atoms": 24,
+          "metadata_n_supported": 14,
+          "metadata_n_not_supported": 10,
+          "metadata_task_type": "hallucination_detection"
+        }
+      ]
+    },
+    {
+      "dataset": "SummaCoz",
+      "examples": [
+        {
+          "input": "Article:\nNearly half of the Radio Rentals customers have been found to be on welfare payments, and they are not just renting household necessities. The ABC have reported that those who receive Centrel...",
+          "output": "0",
+          "metadata_reason": "1. The summary states that Radio Rentals' income last year was made up of Centrelink payments, but the article states that only half of Radio Rentals' income came from Centrelink payments, specificall...",
+          "metadata_origin_dataset": "cogensumm",
+          "metadata_origin": "cnndm",
+          "metadata_task_type": "consistency_detection",
+          "metadata_row_index": 0
+        },
+        {
+          "input": "Article:\nNearly half of the Radio Rentals customers have been found to be on welfare payments, and they are not just renting household necessities. The ABC have reported that those who receive Centrel...",
+          "output": "0",
+          "metadata_reason": "The inconsistency in the summary lies in the lack of specificity regarding the proportion of Radio Rentals' income that came from Centrelink payments. The summary states:\n\n\"the abc have reported that ...",
+          "metadata_origin_dataset": "cogensumm",
+          "metadata_origin": "cnndm",
+          "metadata_task_type": "consistency_detection",
+          "metadata_row_index": 1
+        },
+        {
+          "input": "Article:\nNearly half of the Radio Rentals customers have been found to be on welfare payments, and they are not just renting household necessities. The ABC have reported that those who receive Centrel...",
+          "output": "0",
+          "metadata_reason": "",
+          "metadata_origin_dataset": "cogensumm",
+          "metadata_origin": "cnndm",
+          "metadata_task_type": "consistency_detection",
+          "metadata_row_index": 2
+        }
+      ]
+    }
+  ]
+}
