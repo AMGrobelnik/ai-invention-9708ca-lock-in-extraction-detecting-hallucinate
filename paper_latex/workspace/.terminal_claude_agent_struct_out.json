@@ -1,0 +1,15 @@
+{
+  "title": "Lock-In Extraction: Hallucination Detection Paper",
+  "summary": "Generated a complete 12-page publication-ready LaTeX paper titled 'Lock-In Extraction: Detecting Hallucinated Logical Atoms via Hadamard-Multiplexed Synchronous Detection'. The paper includes all required sections: Abstract, Introduction, Related Work, Methods (Pipeline Overview, Lock-In Provenance Probe with equations), Experiments (Datasets, Baselines, Implementation Details, Prerequisite Gates, Real-Data AUROC, Simulation Under Ideal Canonicalization, SNR Scaling and K-Curve, Calibration, Provenance Accuracy, Multi-Hop Reasoning), Discussion, Conclusion, and References. All 4 figures from available_figures were included: fig1_v0.jpg (Lock-In Extraction Pipeline Architecture, 21:9 aspect ratio, placed as figure* at top of page 3), fig2_v0.jpg (Real-Data AUROC vs. Baselines, 21:9, figure* full-width on page 7), fig3_v0.jpg (AUROC Under Ideal Canonicalization, 4:3, single-column figure on page 8), and fig4_v0.jpg (SNR Scaling and K-Curve, 16:9, figure* full-width on page 9). BibTeX was fetched via aii_semscholar_bib__fetch for 13 of 16 references; 3 entries (Lundberg SHAP, Manhaeve DeepProbLog, Marra DeepSoftLog) were written manually from verified sources. All citations resolved with no '??' errors. Two LaTeX tables are included for the real-data AUROC and simulation AUROC results. Footnotes with GitHub URLs for artifact code links are preserved as required. The PDF compiled cleanly in 4 passes (pdflatex + bibtex + pdflatex + pdflatex) to 12 pages. Visual inspection of all 12 pages confirmed clean layout with no overlapping figures, cut-off text, or formatting issues.",
+  "out_expected_files": {
+    "paper_tex_path": "paper.tex",
+    "paper_pdf_path": "paper.pdf",
+    "references_bib_path": "references.bib",
+    "figure_paths": [
+      "figures/fig1_v0.jpg",
+      "figures/fig2_v0.jpg",
+      "figures/fig3_v0.jpg",
+      "figures/fig4_v0.jpg"
+    ]
+  }
+}
